@@ -260,6 +260,8 @@ if __name__ == '__main__':
 
     import time
     t = time.time()
+    #print(parser)
+    #input()
     result = train_and_eval(args.tag, args.dataroot, test_ratio=args.cv_ratio, cv_fold=args.cv, save_path=args.save, only_eval=args.only_eval, horovod=args.horovod, metric='test')
     elapsed = time.time() - t
 

@@ -1,6 +1,7 @@
 import copy
 import os
 import sys
+sys.path.append("..")
 import time
 from collections import OrderedDict, defaultdict
 
@@ -42,7 +43,7 @@ def step_w_log(self):
         if not trial.last_result:
             continue
         best_top1_acc = max(best_top1_acc, trial.last_result['top1_valid'])
-    print('iter', self._iteration, 'top1_acc=%.3f' % best_top1_acc, cnts, end='\r')
+    print('iter', self._iteration, 'top1_acc=%.3f'%best_top1_acc, cnts, end='\r')
     return original(self)
 
 
